@@ -1,6 +1,7 @@
 import extra as ext
+import veld as v
 
-def getalSelecteren(var):
+def positieSelecteren(var):
     invoer = input('kies uw '+ var + ':')
     if 'q' in invoer:
         ext.shutdown()
@@ -12,12 +13,19 @@ def getalSelecteren(var):
                               "\n"
                               "kies uw rij: ")
         else:
+            invoer = int(invoer) - 1
             Num = False
     return int(invoer)
 
 def selecteerDam():
-    rij = getalSelecteren('rij')
-    kolom = getalSelecteren('kolom')
-    dam = [rij, kolom]
-    return dam
+    rij = positieSelecteren('rij')
+    kolom = positieSelecteren('kolom')
+    damPositie = [rij, kolom]
+    return damPositie
 
+def selecteerStap():
+    select = selecteerDam()
+    rij = select[0]
+    kolom = select[1]
+
+    # print(v.veld[rij])

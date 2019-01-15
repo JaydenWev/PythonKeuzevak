@@ -4,5 +4,5 @@ import selecteren as s      # importeer selecteer functies
 v.setBeginVeld()
 v.toString()
 
-print(s.selecteerDam())
+print(s.selecteerStap())
 
