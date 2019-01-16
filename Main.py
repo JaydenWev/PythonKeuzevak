@@ -1,11 +1,11 @@
 import veld as v            # importeer veld functies
 import selecteren as sel    # importeer selecteer functies
-
-v.setBeginVeld()
-
-sel.selecteerStap()
+import speler as sp
 
 def spelen():
     v.setBeginVeld()
-    while isNoWinner:
+    while not sp.isWinner:
         sel.selecteerStap()
+
+spelen()
+

@@ -2,8 +2,8 @@ import extra as ext
 import veld as v
 import speler as sp
 
-def selecteer(var):
-    invoer = input('kies uw '+ var + ':')
+def selecteerNum(var):
+    invoer = input('speler \'' + sp.activeSpeler + '\' kies uw '+ var + ':')
     if 'q' in invoer:
         ext.shutdown()
     Num = True
@@ -19,8 +19,8 @@ def selecteer(var):
     return int(invoer)
 
 def positieSelecteren():
-    rij = selecteer('rij')
-    kolom = selecteer('kolom')
+    rij = selecteerNum('rij')
+    kolom = selecteerNum('kolom')
     damPositie = [rij, kolom]
     return damPositie
 
@@ -30,13 +30,22 @@ def selecteerStap():
     rij = select[0]
     kolom = select[1]
     dam = v.veld[rij][kolom]
-    print(v.veld[rij])
-    print('\'', dam, '\'')
-    # welke dam is het (kleur en koning)
+    # print(v.veld[rij])
+    # print('\'', dam, '\'')
+
+# welke dam is het (kleur en koning)
+    # de juiste kleur dam is gekozen
     if sp.activeSpeler in dam:
-       print("Dat is jouw dam!")
-    else:
-       print("DAT IS NIET JOUW DAM!")
+        if '=' in dam:
+            print("dat is jouw koning!")
+        else:
+            print("Dat is jouw dam")
+    # Er is geen dam gekozen
+    elif sp.activeSpeler not in dam:
+       print('Dat is geen dam!')
+    # verkeerde kleur dam is gekozen
+    elif v.blank in dam:
+        print('dat is niet jouw dam!')
 #        if sp.activeSpeler =='w':
     # moet je slaan/eten
 

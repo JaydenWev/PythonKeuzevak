@@ -3,9 +3,9 @@ blank = '░░░'
 # blank = '▓▓▓'
 leeg = '   '
 zwart = ' b '
-zwartK = '=B='
+zwartK = '=b='
 wit = ' w '
-witK = '=W='
+witK = '=w='
 
 # rijen van het veld
 een     = [blank, zwart, blank, zwart, blank, zwart, blank, zwart, blank, zwart, ' 1']
