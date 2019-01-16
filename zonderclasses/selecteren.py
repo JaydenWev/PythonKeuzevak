@@ -40,12 +40,12 @@ def selecteerStap():
             print("dat is jouw koning!")
         else:
             print("Dat is jouw dam")
-    # Er is geen dam gekozen
+    # Er is een leeg vak gekozen
     elif sp.activeSpeler not in dam:
        print('Dat is geen dam!')
     # verkeerde kleur dam is gekozen
     elif v.blank in dam:
-        print('dat is niet jouw dam!')
+        print('Dat is niet jouw dam!')
 #        if sp.activeSpeler =='w':
     # moet je slaan/eten
 
