@@ -1,6 +1,15 @@
-from speler import speler
+from player import player
+from field import field
 
-sp1 = speler(True)
-sp2 = speler(False)
 
-print(sp1.isActief)
+f = field()
+
+sp1 = player(True)
+sp2 = player(False)
+
+def play():
+    print(f.blank)
+    f.setBeginField()
+    f.hoi()
+
+play()
