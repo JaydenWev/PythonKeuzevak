@@ -1,9 +1,18 @@
 class player:
-    isActief = bool
+    playerSymbol = ''
+    # houdt bij hoeveel stenen de speler nog heeft
+    damAmount = 20
 
-    def __init__(self, actief):       # constructor
-        global isActief
-        isActief = actief
+    def __init__(self, playerNum):       # constructor
+        if playerNum == 1:
+            playerSymbol = 'w'
+        elif playerNum == 2:
+            playerSymbol = 'b'
+
+
+
+
+
 
     # geeft aan of er een winnaar is
     isWinner = False
@@ -12,9 +21,6 @@ class player:
     # welke speler is aan zet
     activeSpeler = 'w'
     inActiveSpeler = 'b'
-    # houdt bij hoeveel stenen de speler nog heeft
-    dammenW = 20
-    dammenB = 20
 
     def wisselSpeler():
         global activeSpeler
